@@ -1,5 +1,6 @@
 //* JSX to Create the koalaContainer
-let koalaContainer = <div></div>
+//* JSX to Add the ui items Class
+let koalaContainer = <div className="ui items"></div>
 
 koalaContainer.setAttribute('class', 'ui items')
 
