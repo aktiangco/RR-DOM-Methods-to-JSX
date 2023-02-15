@@ -1,29 +1,31 @@
 //* JSX to Create the koalaContainer
 //* JSX to Add the ui items Class
+
 let koalaContainer = (<div className="ui items">
     {/* .map iterate in our JSX. */}
     {koalas.map(koala => (
-        <div className="">
+        // code line #35 & 36
+        <div className="item" style={{cursor: 'pointer'}}>
             {/* Koala Images */}
             <div className="images">{/* code line# 43 */}
-                <img src=""/> 
+                <img src={koala.imageURL}/> 
             </div>
             {/* Content */}
             <div className="content">
                 {/* Koala Name */}
                 <div className="name"> {/* code line# 53 */}
-                    
+                {koala.name} 
                 </div> 
                 {/* Koala Description */}
                 <div className="description"> {/* code line# 56 */}
-                    
+                {koala.description} 
                 </div>
             </div>
         </div>
     ))}
 </div>
 )
-
+document.body.append(koalaContainer)
 
 // koalaContainer.setAttribute('class', 'ui items')
 
@@ -72,4 +74,4 @@ let koalaContainer = (<div className="ui items">
 //     koalaContainer.append(koalaCard)
 // })
 
- document.body.append(koalaContainer)
+//  document.body.append(koalaContainer)
