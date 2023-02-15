@@ -8,17 +8,17 @@ let koalaContainer = (<div className="ui items">
         <div className="item" style={{cursor: 'pointer'}}>
             {/* Koala Images */}
             <div className="images">{/* code line# 43 */}
-                <img src={koala.imageURL}/> 
+                <img width={250} height={250} src={koala.imageURL}/> 
             </div>
             {/* Content */}
             <div className="content">
                 {/* Koala Name */}
                 <div className="name"> {/* code line# 53 */}
-                {koala.name} 
+                 <strong>{koala.name} </strong>
                 </div> 
                 {/* Koala Description */}
                 <div className="description"> {/* code line# 56 */}
-                {koala.description} 
+                <p>{koala.description}</p> 
                 </div>
             </div>
         </div>
