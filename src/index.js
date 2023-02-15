@@ -5,13 +5,19 @@ let koalaContainer = (<div className="ui items">
     {koalas.map(koala => (
         <div className="">
             {/* Koala Images */}
-            <div>Images</div>
+            <div className="images">{/* code line# 43 */}
+                <img src=""/> 
+            </div>
             {/* Content */}
-            <div>
+            <div className="content">
                 {/* Koala Name */}
-                <div>Name</div>
+                <div className="name"> {/* code line# 53 */}
+                    
+                </div> 
                 {/* Koala Description */}
-            <div>Description</div>
+                <div className="description"> {/* code line# 56 */}
+                    
+                </div>
             </div>
         </div>
     ))}
