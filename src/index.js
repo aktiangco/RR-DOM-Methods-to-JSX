@@ -1,52 +1,69 @@
 //* JSX to Create the koalaContainer
 //* JSX to Add the ui items Class
-let koalaContainer = <div className="ui items"></div>
+let koalaContainer = (<div className="ui items">
+    {/* .map iterate in our JSX. */}
+    {koalas.map(koala => (
+        <div className="">
+            {/* Koala Images */}
+            <div>Images</div>
+            {/* Content */}
+            <div>
+                {/* Koala Name */}
+                <div>Name</div>
+                {/* Koala Description */}
+            <div>Description</div>
+            </div>
+        </div>
+    ))}
+</div>
+)
 
-koalaContainer.setAttribute('class', 'ui items')
 
-// Koala Card
-// koalas are in './public/koalas.js'
-koalas.forEach(koala => {
-    let koalaCard = document.createElement('div')
-    koalaCard.setAttribute('class', 'item')
-    koalaCard.style.cursor = 'pointer';
+// koalaContainer.setAttribute('class', 'ui items')
 
-    // Koala Card Image
-    let imageContainer = document.createElement('div')
-    let koalaImage = document.createElement('img')
+// // Koala Card
+// // koalas are in './public/koalas.js'
+// koalas.forEach(koala => {
+//     let koalaCard = document.createElement('div')
+//     koalaCard.setAttribute('class', 'item')
+//     koalaCard.style.cursor = 'pointer';
 
-    imageContainer.setAttribute('class', 'image')
+//     // Koala Card Image
+//     let imageContainer = document.createElement('div')
+//     let koalaImage = document.createElement('img')
 
-    koalaImage.setAttribute('src', koala.imageURL)
+//     imageContainer.setAttribute('class', 'image')
 
-    imageContainer.append(koalaImage)
+//     koalaImage.setAttribute('src', koala.imageURL)
 
-    // Koala Card Content
-    let koalaContent = document.createElement('div')
-    koalaContent.setAttribute('class', 'content')
+//     imageContainer.append(koalaImage)
 
-    let header = document.createElement('div')
-    header.setAttribute('class', 'header')
-    header.append(koala.name)
+//     // Koala Card Content
+//     let koalaContent = document.createElement('div')
+//     koalaContent.setAttribute('class', 'content')
 
-    let descriptionParagraph = document.createElement('p')
-    descriptionParagraph.append(koala.description)
+//     let header = document.createElement('div')
+//     header.setAttribute('class', 'header')
+//     header.append(koala.name)
 
-    let descriptionContainer = document.createElement('div')
-    descriptionContainer.setAttribute('class', 'description')
-    descriptionContainer.append(descriptionParagraph)
+//     let descriptionParagraph = document.createElement('p')
+//     descriptionParagraph.append(koala.description)
 
-    koalaContent.append(
-        header,
-        descriptionContainer
-    )
+//     let descriptionContainer = document.createElement('div')
+//     descriptionContainer.setAttribute('class', 'description')
+//     descriptionContainer.append(descriptionParagraph)
 
-    koalaCard.append(
-        imageContainer,
-        koalaContent
-    )
+//     koalaContent.append(
+//         header,
+//         descriptionContainer
+//     )
 
-    koalaContainer.append(koalaCard)
-})
+//     koalaCard.append(
+//         imageContainer,
+//         koalaContent
+//     )
 
-document.body.append(koalaContainer)
+//     koalaContainer.append(koalaCard)
+// })
+
+ document.body.append(koalaContainer)
